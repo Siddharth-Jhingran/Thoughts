@@ -1,0 +1,83 @@
+*{
+margin:0%;
+padding:0%;
+box-sizing: border-box;
+}
+html,body{
+width: 100%;
+height: 100%;
+/* background-image:url(https://images.unsplash.com/photo-1773176647951-d8f618dee942?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+/* background-size: cover; */
+/* background-position: center; */
+/* background-position-y: fixed; */
+
+color: white;
+}
+/* main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+  /* background-size: cover; */
+  /* background-position: center; */
+  
+/* } */ 
+.background-img{
+  height: 100%;
+  width: 100%;
+  background-image:url(https://plus.unsplash.com/premium_photo-1771923042183-f49ad313f354?q=80&w=801&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+/* background-size: cover; */
+/* background-position: center; */
+position: fixed;
+y:0;
+z-index: -1;
+
+}
+
+.title{
+  width:80%;
+  border-radius: 20px;
+}
+.app-container{
+  height: 40vh;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;  
+  align-items: center ;
+
+}
+form{
+  height: 30vh;
+  border-radius: 20px;
+  /* border:solid 2px rgb(0, 0, 0); */
+  backdrop-filter:blur(3px);
+  width: 80%;
+  /* height: 20vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.card{
+  padding: 10px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+}
+.card div{
+  align-content: end;
+
+}
+.thoughtCards{
+  padding:10px;
+}
+button{
+  padding-inline: 5px;
+}
+.thought{
+  line-height: 1;
+}
