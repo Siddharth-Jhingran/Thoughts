@@ -55,10 +55,12 @@ const App = () => {
 
   function cards() {
     return thoughts.map((thoughts, idx) => (
-      <div className="card border-2 border-l-cyan-950 " key={idx} >
-        <h3 className="thought text-2xl w-90">{thoughts.thought}</h3>
-        <div className="name text-right">{thoughts.name}</div>
-        <button className='border-2 border-y-red-700 rounded-2xl px-2' onClick={() => deleteHandler({ thoughts })}>  Remove </button>
+      <div className="card border-2 border-l-cyan-950 rounded-2xl flex flex-col justify-around" key={idx} >
+        <div>
+          <h3 className="thought text-2xl w-90">{thoughts.thought}</h3>
+          <div className="name text-right">{thoughts.name}</div>
+        </div>
+        <button className='border-2 border-y-red-700/70 hover:bg-red-700/30 transition-all rounded-2xl px-2' onClick={() => deleteHandler({ thoughts })}>  Remove </button>
 
       </div>
 
@@ -74,7 +76,7 @@ const App = () => {
           <h2 className='text-xl'>Put something from your heart❤...</h2>
           <input type="text" className='title border-x-blue-600 border-2 ' placeholder='   Enter your name....' onChange={(e) => { setName(e.target.value) }} value={Name} />
           <input type="text" className=' w-[80%] border-2 border-b-amber-800 rounded-2xl' placeholder='   Left your thought here....' onChange={(e) => { setwriteThought(e.target.value) }} value={writeThought} />
-          <button className='w-[80%] border-bs-emerald-900 rounded-2xl border-2' onClick={(e) => { submitHandler(e) }}>Submit</button>
+          <button className='w-[80%] border-bs-emerald-900 rounded-2xl border-2 hover:bg-emerald-600/30 transition-all' onClick={(e) => { submitHandler(e) }}>Submit</button>
         </form>
       </div>
 

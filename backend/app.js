@@ -2,6 +2,9 @@ const express = require ('express');
 const thoughtModel= require('./src/model/thoughtModel')
 const app = express();
 const cors = require("cors")
+const path = require("path")
+
+app.use(express.static(path.join(__dirname,"./public")))
 
 app.use(cors())
 
@@ -11,6 +14,8 @@ app.get("/",(req,res) =>{
     res.send("Hello sir")
 })
 const description = [];
+
+
 
 app.post("/thought", async (req,res) =>{
     const data=req.body
@@ -51,6 +56,13 @@ app.patch("/thought/:id",async (req,res)=>{
      res.json({
         message : "updated"
      })
+})
+
+
+
+app.use("*name", (req,res)=>{
+    res.sendFile(path.join(__dirname,"./public/index.html"))
+    // res.send("404 not found")
 })
 
 module.exports = app;
