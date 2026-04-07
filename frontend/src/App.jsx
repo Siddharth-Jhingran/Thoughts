@@ -10,7 +10,7 @@ const App = () => {
 
 
   function getThoughts() {
-    axios.get("http://localhost:3000/thought")
+    axios.get("https://thoughts-4paf.onrender.com/thought")
       .then((res) => {
         setthought(res.data.allThoughts)
         // console.log(res.data.allThoughts)
@@ -22,7 +22,7 @@ const App = () => {
 
   const deleteHandler = ({ thoughts }) => {
     // e.preventDefault()
-    axios.delete(`http://localhost:3000/thought/${thoughts._id}`, {
+    axios.delete(`https://thoughts-4paf.onrender.com/${thoughts._id}`, {
       data: {
         name: Name,
         thought: writeThought
@@ -37,7 +37,7 @@ const App = () => {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    axios.post("http://localhost:3000/thought", {
+    axios.post("https://thoughts-4paf.onrender.com/thought", {
       name: Name,
       thought: writeThought
     }).then((res) => {
